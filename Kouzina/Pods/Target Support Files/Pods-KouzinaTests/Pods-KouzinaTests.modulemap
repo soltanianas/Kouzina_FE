@@ -1,0 +1,6 @@
+framework module Pods_KouzinaTests {
+  umbrella header "Pods-KouzinaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
