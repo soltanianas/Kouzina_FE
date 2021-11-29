@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireSwiftyJSON (1.0.2):
+    - Alamofire (~> 4.0)
+    - SwiftyJSON (~> 4.0)
+  - FittedSheets (2.4.2)
+  - GoogleMaps (5.2.0):
+    - GoogleMaps/Maps (= 5.2.0)
+  - GoogleMaps/Base (5.2.0)
+  - GoogleMaps/Maps (5.2.0):
+    - GoogleMaps/Base
+  - IQKeyboardManagerSwift (6.5.9)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ObjectMapper (4.2.0)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireSwiftyJSON
+  - FittedSheets
+  - GoogleMaps
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView (= 4.8.0)
+  - ObjectMapper
+  - ReachabilitySwift
+  - SDWebImage
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireSwiftyJSON
+    - FittedSheets
+    - GoogleMaps
+    - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - ReachabilitySwift
+    - SDWebImage
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireSwiftyJSON: 74ee3804bed06d07857daf1eeb1615c85dba3997
+  FittedSheets: 661408776eb4ff514a31da75b3600bd7222b2b3d
+  GoogleMaps: 025272d5876d3b32604e5c080dc25eaf68764693
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: b744a8cccf65e38e149f639f193dbe09c014020a
+
+COCOAPODS: 1.11.2

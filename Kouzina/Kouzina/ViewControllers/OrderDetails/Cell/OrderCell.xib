@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSans Bold.otf">
+            <string>BentonSans-Bold</string>
+        </array>
+        <array key="BentonSans Medium.otf">
+            <string>BentonSans-Medium</string>
+        </array>
+        <array key="BentonSans Regular Regular.otf">
+            <string>BentonSans-Regular</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="vrg-O9-bqa" customClass="OrderCell" customModule="Kouzina" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vrg-O9-bqa" id="Um5-Cc-Zfg">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64B-bd-ahb" customClass="CustomView" customModule="Kouzina" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="10" width="323" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waroenk kita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s5-lm-XtX">
+                                <rect key="frame" x="92" y="42" width="84.5" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Oyt-S4-HON"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BentonSans-Regular" family="BentonSans Regular" pointSize="14"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u13-aD-RMb">
+                                <rect key="frame" x="251" y="44.5" width="30" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="o9k-um-nrA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spacy fresh crab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sI-F2-fB4">
+                                <rect key="frame" x="92" y="18" width="121" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6dk-ep-nzA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BentonSans-Medium" family="BentonSans" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2i-FR-dhp">
+                                <rect key="frame" x="92" y="69" width="41.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="i8r-9m-5Dr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BentonSans-Bold" family="BentonSans" pointSize="19"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.90980392160000001" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu" translatesAutoresizingMaskIntoConstraints="NO" id="fZB-tR-Q3C">
+                                <rect key="frame" x="10" y="20.5" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="4Is-AE-dN1"/>
+                                    <constraint firstAttribute="width" constant="62" id="Fsf-w2-rID"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdG-PM-G5r">
+                                <rect key="frame" x="286" y="38.5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="nJ9-93-Sfz"/>
+                                    <constraint firstAttribute="width" constant="26" id="yz4-nz-b0X"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_add"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6W6-tZ-jzf">
+                                <rect key="frame" x="220" y="38.5" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="K2j-ik-Kd3"/>
+                                    <constraint firstAttribute="height" constant="26" id="MQY-IB-yrG"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_remove"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="B2i-FR-dhp" secondAttribute="bottom" constant="14" id="2bY-tO-Lzs"/>
+                            <constraint firstItem="kdG-PM-G5r" firstAttribute="centerY" secondItem="64B-bd-ahb" secondAttribute="centerY" id="5Rd-Zp-JbL"/>
+                            <constraint firstAttribute="trailing" secondItem="6W6-tZ-jzf" secondAttribute="trailing" constant="77" id="7nd-Ik-uqF"/>
+                            <constraint firstAttribute="trailing" secondItem="kdG-PM-G5r" secondAttribute="trailing" constant="11" id="9ct-OU-Z03"/>
+                            <constraint firstItem="B2i-FR-dhp" firstAttribute="leading" secondItem="fZB-tR-Q3C" secondAttribute="trailing" constant="20" id="B9w-r6-Yf3"/>
+                            <constraint firstItem="3sI-F2-fB4" firstAttribute="leading" secondItem="fZB-tR-Q3C" secondAttribute="trailing" constant="20" id="DR5-5I-CYS"/>
+                            <constraint firstItem="kdG-PM-G5r" firstAttribute="leading" secondItem="u13-aD-RMb" secondAttribute="trailing" constant="5" id="Eh3-58-2nn"/>
+                            <constraint firstItem="u13-aD-RMb" firstAttribute="centerY" secondItem="64B-bd-ahb" secondAttribute="centerY" id="JZv-W4-2yi"/>
+                            <constraint firstItem="u13-aD-RMb" firstAttribute="leading" secondItem="6W6-tZ-jzf" secondAttribute="trailing" constant="5" id="PTU-bt-Iqf"/>
+                            <constraint firstItem="2s5-lm-XtX" firstAttribute="top" secondItem="3sI-F2-fB4" secondAttribute="bottom" constant="4" id="WUo-90-I56"/>
+                            <constraint firstItem="2s5-lm-XtX" firstAttribute="leading" secondItem="fZB-tR-Q3C" secondAttribute="trailing" constant="20" id="a17-6z-HtU"/>
+                            <constraint firstItem="fZB-tR-Q3C" firstAttribute="leading" secondItem="64B-bd-ahb" secondAttribute="leading" constant="10" id="eA0-si-Au5"/>
+                            <constraint firstAttribute="bottom" secondItem="fZB-tR-Q3C" secondAttribute="bottom" constant="20.5" id="eMU-y5-V2p"/>
+                            <constraint firstItem="fZB-tR-Q3C" firstAttribute="top" secondItem="64B-bd-ahb" secondAttribute="top" constant="20.5" id="fq7-og-8j8"/>
+                            <constraint firstItem="6W6-tZ-jzf" firstAttribute="centerY" secondItem="64B-bd-ahb" secondAttribute="centerY" id="n72-7D-JWE"/>
+                            <constraint firstItem="3sI-F2-fB4" firstAttribute="top" secondItem="64B-bd-ahb" secondAttribute="top" constant="18" id="nFV-yx-blq"/>
+                            <constraint firstItem="fZB-tR-Q3C" firstAttribute="centerY" secondItem="64B-bd-ahb" secondAttribute="centerY" id="rKh-OE-wq7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColors">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="64B-bd-ahb" secondAttribute="bottom" constant="10" id="K2O-LZ-Jax"/>
+                    <constraint firstItem="64B-bd-ahb" firstAttribute="top" secondItem="Um5-Cc-Zfg" secondAttribute="top" constant="10" id="Uhx-g6-uYZ"/>
+                    <constraint firstAttribute="trailing" secondItem="64B-bd-ahb" secondAttribute="trailing" id="oG9-Ki-g3D"/>
+                    <constraint firstItem="64B-bd-ahb" firstAttribute="leading" secondItem="Um5-Cc-Zfg" secondAttribute="leading" id="rwD-MI-s4o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="WWN-UB-oRj"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="136.95652173913044" y="101.45089285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_add" width="26" height="26"/>
+        <image name="ic_menu" width="64" height="64"/>
+        <image name="ic_remove" width="26" height="26"/>
+    </resources>
+</document>
