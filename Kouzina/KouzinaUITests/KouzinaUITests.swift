@@ -2,7 +2,7 @@
 //  KouzinaUITests.swift
 //  KouzinaUITests
 //
-//  Created by Anil Dhameliya on 21/11/21.
+//  Created by Anas Soltani on 21/11/21.
 //
 
 import XCTest

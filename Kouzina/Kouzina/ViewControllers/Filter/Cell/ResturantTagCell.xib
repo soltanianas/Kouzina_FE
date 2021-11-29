@@ -25,13 +25,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-TI-NU6">
-                                <rect key="frame" x="25" y="19" width="31.5" height="17.5"/>
+                                <rect key="frame" x="25" y="19" width="36.5" height="14.5"/>
                                 <fontDescription key="fontDescription" name="BentonSans-Bold" family="BentonSans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRw-sD-cec" customClass="TagListView" customModule="CookiApp" customModuleProvider="target">
-                                <rect key="frame" x="21" y="65.5" width="289" height="111.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRw-sD-cec" customClass="TagListView" customModule="Kouzina" customModuleProvider="target">
+                                <rect key="frame" x="21" y="62.5" width="289" height="114.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
