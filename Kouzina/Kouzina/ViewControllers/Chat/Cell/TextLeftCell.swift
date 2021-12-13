@@ -2,7 +2,7 @@
 //  TextLeftCell.swift
 //  Kouzina
 //
-//  Created by Anil Dhameliya on 20/11/21.
+//  Created by Anas Soltani on 20/11/21.
 //
 
 import UIKit
