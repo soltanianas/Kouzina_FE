@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BentonSans Bold.otf">
+            <string>BentonSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResturantTagCell" id="quC-IM-wIp" customClass="ResturantTagCell" customModule="Kouzina" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="quC-IM-wIp" id="LCL-NV-6ab">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovh-2m-xaN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-TI-NU6">
+                                <rect key="frame" x="25" y="19" width="31.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="BentonSans-Bold" family="BentonSans" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRw-sD-cec" customClass="TagListView" customModule="CookiApp" customModuleProvider="target">
+                                <rect key="frame" x="21" y="65.5" width="289" height="111.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jRw-sD-cec" firstAttribute="leading" secondItem="Ovh-2m-xaN" secondAttribute="leading" constant="21" id="CWA-T8-wPQ"/>
+                            <constraint firstAttribute="trailing" secondItem="jRw-sD-cec" secondAttribute="trailing" constant="10" id="HXm-Je-rlz"/>
+                            <constraint firstItem="jRw-sD-cec" firstAttribute="top" secondItem="mBi-TI-NU6" secondAttribute="bottom" constant="29" id="HcB-PB-eQZ"/>
+                            <constraint firstItem="mBi-TI-NU6" firstAttribute="leading" secondItem="Ovh-2m-xaN" secondAttribute="leading" constant="25" id="JWE-qS-XgF"/>
+                            <constraint firstItem="mBi-TI-NU6" firstAttribute="top" secondItem="Ovh-2m-xaN" secondAttribute="top" constant="19" id="nsI-OA-dTV"/>
+                            <constraint firstAttribute="bottom" secondItem="jRw-sD-cec" secondAttribute="bottom" constant="10" id="sDV-1L-yjs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Ovh-2m-xaN" secondAttribute="trailing" id="9lC-Af-d8Z"/>
+                    <constraint firstAttribute="bottom" secondItem="Ovh-2m-xaN" secondAttribute="bottom" id="TBg-GJ-Gx7"/>
+                    <constraint firstItem="Ovh-2m-xaN" firstAttribute="leading" secondItem="LCL-NV-6ab" secondAttribute="leading" id="UhW-Oe-0ZW"/>
+                    <constraint firstItem="Ovh-2m-xaN" firstAttribute="top" secondItem="LCL-NV-6ab" secondAttribute="top" id="h3u-Sy-ZZE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Ooa-Ya-H0v"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblTitle" destination="mBi-TI-NU6" id="hCV-7f-2Zd"/>
+                <outlet property="tagListView" destination="jRw-sD-cec" id="tfi-kR-Ftg"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="107"/>
+        </tableViewCell>
+    </objects>
+</document>
