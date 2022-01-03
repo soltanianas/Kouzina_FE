@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1064A763277E351F008F3B76 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1064A762277E351F008F3B76 /* Reachability.swift */; };
+		1064A765277E357F008F3B76 /* AddChefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1064A764277E357F008F3B76 /* AddChefView.swift */; };
+		10CB31B82775CD3B00D9A5C1 /* ChefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB31B72775CD3B00D9A5C1 /* ChefViewModel.swift */; };
+		10CB31BA2775CDA400D9A5C1 /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CB31B92775CDA400D9A5C1 /* Chef.swift */; };
 		136D8105274A33CB00507399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136D8104274A33CB00507399 /* AppDelegate.swift */; };
 		136D810C274A33CB00507399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 136D810A274A33CB00507399 /* Main.storyboard */; };
 		136D810E274A33CD00507399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 136D810D274A33CD00507399 /* Assets.xcassets */; };
@@ -89,13 +93,14 @@
 		13EE2664274A9F8800766646 /* CBTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EE2662274A9F8800766646 /* CBTabBarButton.swift */; };
 		13EE2666274AA0CA00766646 /* BubbleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EE2665274AA0CA00766646 /* BubbleTabBarController.swift */; };
 		13EE2668274AA0D500766646 /* BubbleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EE2667274AA0D500766646 /* BubbleTabBar.swift */; };
+		4F0B5318277CD5BB007BB49A /* favouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B5317277CD5BB007BB49A /* favouritesViewController.swift */; };
+		4F134723277A24DC002F915A /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F134722277A24DC002F915A /* mapViewController.swift */; };
 		4F1CC8EE276614D5007256F6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CC8ED276614D5007256F6 /* Order.swift */; };
 		4F1CC8F0276618F4007256F6 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CC8EF276618F4007256F6 /* OrderViewModel.swift */; };
 		4F1CC8F227661D08007256F6 /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CC8F127661D08007256F6 /* AddOrderView.swift */; };
 		4F1CC8F427662B9A007256F6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CC8F327662B9A007256F6 /* MenuView.swift */; };
 		4F69EA552765714700C6049E /* PlatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69EA542765714700C6049E /* PlatViewModel.swift */; };
 		4F69EA572765718200C6049E /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69EA562765718200C6049E /* Plat.swift */; };
-		4F69EA592765750100C6049E /* platsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69EA582765750100C6049E /* platsView.swift */; };
 		4F69EA5B2765765D00C6049E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69EA5A2765765D00C6049E /* ImageLoader.swift */; };
 		4F69EA5D2765784400C6049E /* AddPlatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69EA5C2765784400C6049E /* AddPlatView.swift */; };
 		4F92E84B27654E1E00D83367 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92E84A27654E1E00D83367 /* UserViewModel.swift */; };
@@ -127,6 +132,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1064A762277E351F008F3B76 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		1064A764277E357F008F3B76 /* AddChefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChefView.swift; sourceTree = "<group>"; };
+		10CB31B72775CD3B00D9A5C1 /* ChefViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefViewModel.swift; sourceTree = "<group>"; };
+		10CB31B92775CDA400D9A5C1 /* Chef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chef.swift; sourceTree = "<group>"; };
 		136D8101274A33CB00507399 /* Kouzina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kouzina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		136D8104274A33CB00507399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		136D810B274A33CB00507399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -214,13 +223,14 @@
 		13EE2665274AA0CA00766646 /* BubbleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBarController.swift; sourceTree = "<group>"; };
 		13EE2667274AA0D500766646 /* BubbleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTabBar.swift; sourceTree = "<group>"; };
 		43C85F334F8873267EAA2C39 /* Pods-KouzinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KouzinaTests.debug.xcconfig"; path = "Target Support Files/Pods-KouzinaTests/Pods-KouzinaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F0B5317277CD5BB007BB49A /* favouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouritesViewController.swift; sourceTree = "<group>"; };
+		4F134722277A24DC002F915A /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		4F1CC8ED276614D5007256F6 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		4F1CC8EF276618F4007256F6 /* OrderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		4F1CC8F127661D08007256F6 /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
 		4F1CC8F327662B9A007256F6 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		4F69EA542765714700C6049E /* PlatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatViewModel.swift; sourceTree = "<group>"; };
 		4F69EA562765718200C6049E /* Plat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plat.swift; sourceTree = "<group>"; };
-		4F69EA582765750100C6049E /* platsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = platsView.swift; sourceTree = "<group>"; };
 		4F69EA5A2765765D00C6049E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4F69EA5C2765784400C6049E /* AddPlatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlatView.swift; sourceTree = "<group>"; };
 		4F92E84A27654E1E00D83367 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -296,7 +306,6 @@
 				136D8137274A34ED00507399 /* ViewControllers */,
 				4F92E84927654DC300D83367 /* ViewModel */,
 				13EE25F2274A533000766646 /* Library */,
-				13EE25EF274A52AA00766646 /* Api Manager */,
 				136D8149274A37AE00507399 /* IBDesignableX */,
 				136D8134274A344F00507399 /* Fonts */,
 				5B6D874B2765454D00F99A6C /* Alert.swift */,
@@ -367,6 +376,8 @@
 		136D8137274A34ED00507399 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4F0B5316277CD5A4007BB49A /* Favourites */,
+				4F134721277A24D0002F915A /* Map */,
 				5B6D8744276544E700F99A6C /* ForgotPassword */,
 				13EE265B274A943800766646 /* Success */,
 				13EE2653274A7D6A00766646 /* DetailsMenu */,
@@ -380,10 +391,10 @@
 				13AE56BF274A43E400F0C049 /* Home */,
 				13AE56B8274A3E7500F0C049 /* SignUp */,
 				136D8138274A350B00507399 /* SignIn */,
-				4F69EA582765750100C6049E /* platsView.swift */,
 				4F69EA5C2765784400C6049E /* AddPlatView.swift */,
 				4F1CC8F127661D08007256F6 /* AddOrderView.swift */,
 				4F1CC8F327662B9A007256F6 /* MenuView.swift */,
+				1064A764277E357F008F3B76 /* AddChefView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -456,17 +467,11 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		13EE25EF274A52AA00766646 /* Api Manager */ = {
-			isa = PBXGroup;
-			children = (
-				13EE25F0274A52AA00766646 /* Constant.swift */,
-			);
-			path = "Api Manager";
-			sourceTree = "<group>";
-		};
 		13EE25F2274A533000766646 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1064A762277E351F008F3B76 /* Reachability.swift */,
+				13EE25F0274A52AA00766646 /* Constant.swift */,
 				13EE265E274A9F5D00766646 /* BubbleTabBar */,
 				13EE25F3274A533700766646 /* TagListView */,
 			);
@@ -623,12 +628,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4F0B5316277CD5A4007BB49A /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				4F0B5317277CD5BB007BB49A /* favouritesViewController.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		4F134721277A24D0002F915A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4F134722277A24DC002F915A /* mapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		4F92E84927654DC300D83367 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				4F92E84A27654E1E00D83367 /* UserViewModel.swift */,
 				4F69EA542765714700C6049E /* PlatViewModel.swift */,
 				4F1CC8EF276618F4007256F6 /* OrderViewModel.swift */,
+				10CB31B72775CD3B00D9A5C1 /* ChefViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -639,6 +661,7 @@
 				4F92E84D27654F2700D83367 /* User.swift */,
 				4F69EA562765718200C6049E /* Plat.swift */,
 				4F1CC8ED276614D5007256F6 /* Order.swift */,
+				10CB31B92775CDA400D9A5C1 /* Chef.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -978,9 +1001,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CB31B82775CD3B00D9A5C1 /* ChefViewModel.swift in Sources */,
 				5B6D8747276544F700F99A6C /* ChangerMdpView.swift in Sources */,
+				4F134723277A24DC002F915A /* mapViewController.swift in Sources */,
 				136D8153274A37AE00507399 /* xUIButton.swift in Sources */,
 				136D8157274A37AE00507399 /* CustomLabel.swift in Sources */,
+				10CB31BA2775CDA400D9A5C1 /* Chef.swift in Sources */,
+				1064A765277E357F008F3B76 /* AddChefView.swift in Sources */,
 				13EE264A274A6D5C00766646 /* OrdersCell.swift in Sources */,
 				13EE264E274A6FEB00766646 /* TrackOrderVC.swift in Sources */,
 				4F1CC8F0276618F4007256F6 /* OrderViewModel.swift in Sources */,
@@ -989,6 +1016,7 @@
 				13EE25FD274A569300766646 /* ExploreMenuVC.swift in Sources */,
 				13EE2602274A5B2300766646 /* MessageVC.swift in Sources */,
 				4F1CC8F227661D08007256F6 /* AddOrderView.swift in Sources */,
+				1064A763277E351F008F3B76 /* Reachability.swift in Sources */,
 				13EE25F1274A52AA00766646 /* Constant.swift in Sources */,
 				5B6D8748276544F700F99A6C /* ConfirmationView.swift in Sources */,
 				4F69EA572765718200C6049E /* Plat.swift in Sources */,
@@ -997,7 +1025,6 @@
 				13AE56CB274A4E4000F0C049 /* ResturantMenuCell.swift in Sources */,
 				136D8156274A37AE00507399 /* CustomTextview.swift in Sources */,
 				13EE25F7274A533700766646 /* CloseButton.swift in Sources */,
-				4F69EA592765750100C6049E /* platsView.swift in Sources */,
 				13EE2659274A915300766646 /* DetailsMenuCell.swift in Sources */,
 				4F1CC8EE276614D5007256F6 /* Order.swift in Sources */,
 				13EE2655274A7D7D00766646 /* DetailsMenuVC.swift in Sources */,
@@ -1006,6 +1033,7 @@
 				136D8154274A37AE00507399 /* CustomTextField.swift in Sources */,
 				13EE260C274A5FA800766646 /* ChatVC.swift in Sources */,
 				13EE261E274A650F00766646 /* OrderCell.swift in Sources */,
+				4F0B5318277CD5BB007BB49A /* favouritesViewController.swift in Sources */,
 				5B6D874A2765450200F99A6C /* MdpOublieView.swift in Sources */,
 				13EE2614274A61D500766646 /* TextLeftCell.swift in Sources */,
 				13EE2607274A5DA200766646 /* MessageCell.swift in Sources */,
@@ -1121,6 +1149,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1142,6 +1171,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -1197,6 +1227,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -1209,13 +1240,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4U3B5T7DXP;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kouzina/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Kouzina camera use";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Description;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Description;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Description;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Kouzina woud like to use biometrics to login";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Kouzina photo use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1249,9 +1278,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kouzina/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Kouzina camera use";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Description;
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Description;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Description;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Kouzina woud like to use biometrics to login";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Kouzina photo use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

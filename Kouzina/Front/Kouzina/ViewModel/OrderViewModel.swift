@@ -12,15 +12,17 @@ import UIKit.UIImage
 
 class OrderViewModel {
     
-    func getAllOrders(  completed: @escaping (Bool, [Order]?) -> Void ) {
-        AF.request(HOST + "/commande",
+    static let sharedInstance = OrderViewModel()
+    
+    func getAll(  completed: @escaping (Bool, [Order]?) -> Void ) {
+        AF.request(HOST + "order",
                    method: .get)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { response in
                 switch response.result {
                 case .success:
-                    let jsonData = JSON(response.data!)
+                    let jsonData = JSON(response.data!)["orders"]
                     var orders : [Order]? = []
                     for singleJsonItem in jsonData {
                         orders!.append(self.makeOrder(jsonItem: singleJsonItem.1))
@@ -33,13 +35,13 @@ class OrderViewModel {
             }
     }
     
-    func addOrder(order: Order, completed: @escaping (Bool) -> Void ) {
-        AF.request(HOST + "/commande/add",
+    func add(order: Order, completed: @escaping (Bool) -> Void ) {
+        AF.request(HOST + "order",
                    method: .post,
                          parameters: [
                             "type": order.type,
                             "emplacement": order.emplacement,
-                            "plat": order.plat
+                            "plat": (order.plat?._id)!
                          ])
                   .validate(statusCode: 200..<300)
                   .validate(contentType: ["application/json"])
@@ -59,7 +61,7 @@ class OrderViewModel {
             _id: jsonItem["_id"].stringValue,
             type: jsonItem["type"].stringValue,
             emplacement: jsonItem["emplacement"].stringValue,
-            plat: jsonItem["plat"].stringValue
+            plat: PlatViewModel.sharedInstance.makePlat(jsonItem: jsonItem["plat"])
         )
     }
 }

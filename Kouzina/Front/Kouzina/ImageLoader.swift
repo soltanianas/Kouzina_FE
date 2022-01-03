@@ -36,8 +36,10 @@ class ImageLoader{
                 guard let data = try? Data(contentsOf: url) else {return}
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
-                    self.imageCache.setObject(image!, forKey: NSString(string: identifier))
-                    completion (image)
+                    if image != nil {
+                        self.imageCache.setObject(image!, forKey: NSString(string: identifier))
+                        completion (image)
+                    }
                 }
             }
         }

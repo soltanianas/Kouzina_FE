@@ -1,5 +1,5 @@
 //
-//  AddPlatView.swift
+//  AddChefView.swift
 //  Kouzina
 //
 //  Created by Apple Esprit on 12/12/2021.
@@ -8,15 +8,13 @@
 import Foundation
 import UIKit
 
-class AddPlatView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddChefView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // VAR
     var currentPhoto : UIImage?
     
     // WIDGET
-    @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var composantsTextField: UITextField!
-    @IBOutlet weak var prixTextField: UITextField!
+    @IBOutlet weak var nomTF: UITextField!
     
     @IBOutlet weak var addImageButton: UIButton!
     @IBOutlet weak var imagePub: UIImageView!
@@ -32,28 +30,21 @@ class AddPlatView: UIViewController, UIImagePickerControllerDelegate, UINavigati
     
     
     // ACTIONS
-    @IBAction func ajouterPlat(_ sender: Any) {
+    @IBAction func ajouterChef(_ sender: Any) {
         
         if (currentPhoto == nil){
             self.present(Alert.makeAlert(titre: "Avertissement", message: "Choisir une image"), animated: true)
             return
         }
         
-        if (Float(prixTextField.text!) == nil){
-            self.present(Alert.makeAlert(titre: "Error", message: "Price should be a float"),animated: true)
+        if nomTF.text!.isEmpty {
+            self.present(Alert.makeAlert(titre: "Error", message: "Fill the name"),animated: true)
             return
         }
         
-        let plat = Plat(
-            prix: Float(prixTextField.text!)!,
-            description: descriptionTextField.text!,
-            composition: composantsTextField.text!,
-            image: ""
-        )
-        
-        PlatViewModel.sharedInstance.add(plat: plat, uiImage: currentPhoto!) { success in
+        ChefViewModel.sharedInstance.add(chef: Chef(_id: "", nom: nomTF.text!, image: ""), uiImage: currentPhoto!) { success in
             if success {
-                self.present(Alert.makeSingleActionAlert(titre: "Success", message: "Plat ajouté",action: UIAlertAction(title: "Proceed", style: .default, handler: { UIAlertAction in
+                self.present(Alert.makeSingleActionAlert(titre: "Success", message: "Chef added",action: UIAlertAction(title: "Proceed", style: .default, handler: { UIAlertAction in
                     self.dismiss(animated: true, completion: nil)
                 })),animated: true)
             }

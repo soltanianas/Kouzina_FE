@@ -25,12 +25,13 @@ class SignUpVC: UIViewController {
     @IBAction func btnSIgnUpClicked(_ sender: Any) {
         
         let user = User(
-            nom: nomTF.text,
-            email: emailTF.text,
-            password: mdpTF.text
+            nom: nomTF.text!,
+            email: emailTF.text!,
+            password: mdpTF.text!,
+            role: ""
         )
         
-        UserViewModel().inscription(user: user) { success in
+        UserViewModel.sharedInstance.signup(user: user) { success in
             if success {
                 self.present(Alert.makeSingleActionAlert(titre: "Notice", message: "Inscription effectué avec succés", action: UIAlertAction(title: "Connexion", style: .default, handler: { UIAlertAction in
                     self.performSegue(withIdentifier: "connexionSegue", sender: nil)

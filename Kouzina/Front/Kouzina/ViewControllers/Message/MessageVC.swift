@@ -9,6 +9,7 @@ import UIKit
 
 class MessageVC: UIViewController {
 
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -54,5 +55,7 @@ extension MessageVC: UITableViewDelegate,UITableViewDataSource {
         obj.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(obj, animated: true)
     }
+    
+    
 }
 

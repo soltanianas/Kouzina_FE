@@ -9,7 +9,7 @@ import Foundation
 
 struct User {
     
-    internal init(_id: String? = nil, nom: String? = nil, email: String? = nil, password: String? = nil, image: String? = nil, role: String? = nil) {
+    internal init(_id: String? = nil, nom: String, email: String, password: String, image: String? = nil, role: String) {
         self._id = _id
         self.nom = nom
         self.email = email
@@ -19,9 +19,9 @@ struct User {
     }
     
     var _id : String?
-    var nom : String?
-    var email : String?
-    var password : String?
+    var nom : String
+    var email : String
+    var password : String
     var image : String?
-    var role : String?
+    var role : String
 }

@@ -8,7 +8,8 @@
 import Foundation
 
 struct Plat {
-    internal init(_id: String? = nil, prix: Float? = nil, description: String? = nil, composition: String? = nil, image: String? = nil) {
+    
+    internal init(_id: String? = nil, prix: Float, description: String, composition: String, image: String? = nil ) {
         self._id = _id
         self.prix = prix
         self.description = description
@@ -16,11 +17,9 @@ struct Plat {
         self.image = image
     }
     
-    
-    
     var _id: String?
-    var prix : Float?
-    var description : String?
-    var composition : String?
+    var prix : Float
+    var description : String
+    var composition : String
     var image : String?
 }

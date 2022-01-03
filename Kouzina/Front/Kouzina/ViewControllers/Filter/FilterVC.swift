@@ -7,73 +7,69 @@
 
 import UIKit
 
-class FilterVC: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var heightTableView: NSLayoutConstraint!
-    
-    var titleArray:  [String] = ["Type", "Emplacement", "Type de repas"]
-    var tagsArray:  [[String]] = [["Restaurant", "Menu"], ["1 Km", ">10 Km", "<10 Km"], ["Cake", "Soupe", "Course de produits", "Appetizer", "Dessert"]]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.register(UINib(nibName: "ResturantTagCell", bundle: nil), forCellReuseIdentifier: "ResturantTagCell")
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.reloadData()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func btnSearchClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    func reloadData() {
-        self.tableView.reloadData {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                print(self.tableView.contentSize.height)
-                self.heightTableView.constant = self.tableView.contentSize.height
-            }
-        }
-    }
-}
+class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-extension FilterVC: UITableViewDelegate,UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        DispatchQueue.main.async {
-            self.heightTableView.constant = self.tableView.contentSize.height
-        }
-    }
+    // variables
+    var chefs = [Chef]()
+    var chefForDetails : Chef?
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
+    // iboutlets
+    @IBOutlet weak var chefsTableView: UITableView!
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
+    // protocols
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        chefs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ResturantTagCell", for: indexPath) as! ResturantTagCell
-        cell.selectionStyle = .none
-        cell.tag = indexPath.row
-        DispatchQueue.main.async {
-            self.heightTableView.constant = self.tableView.contentSize.height
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mCell", for: indexPath)
+        let contentView = cell.contentView
+        let chefImage = contentView.viewWithTag(1) as! UIImageView
+        let chefLabel = contentView.viewWithTag(2) as! UILabel
+        
+        let chef = chefs[indexPath.row]
+        print(chef)
+        if chef.image != ""{
+            ImageLoader.shared.loadImage(
+                identifier: chef.image,
+                url: "http://localhost:3000/img/" + chef.image,
+                completion: { image in
+                    chefImage.image = image
+                })
         }
-        cell.lblTitle.text = self.titleArray[indexPath.row]
-        cell.addTagView(tags: self.tagsArray[indexPath.row])
+        
+        chefLabel.text = chef.nom
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    // life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if reachability.connection == .unavailable {
+            showSpinner()
+            self.showAlert(title: "Connectivity Problem", message: "Please check your internet connection ")
+        } else {
+            if (UserDefaults.standard.string(forKey: "isItNew")) == "isNew"{
+                self.present(Alert.makeAlert(titre: "Bienvenue", message: "Bienvenu " + UserDefaults.standard.string(forKey: "userNom")!), animated: true, completion: nil)
+                UserDefaults.standard.set("", forKey: "isItNew")
+            }
+            loadChefs()}
+    }
+    
+    // methods
+    func loadChefs() {
+        ChefViewModel.sharedInstance.getAll { succes, reponse in
+            if succes {
+                self.chefs = reponse!
+            } else {
+                self.present(Alert.makeAlert(titre: "Error", message: "Could not load chefs"), animated: true)
+            }
+            self.chefsTableView.reloadData()
+        }
     }
 }
-

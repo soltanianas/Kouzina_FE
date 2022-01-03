@@ -1,5 +1,5 @@
 //
-//  OrdersVC.swift
+//  PlatsVC.swift
 //  Kouzina
 //
 //  Created by Anil Dhameliya on 21/11/21.
@@ -10,59 +10,77 @@ import FittedSheets
 
 class OrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var orders: [Order] = []
+    // VARIABLES
+    var plats : [Plat] = []
     
-    @IBOutlet weak var tableView: UITableView!
+    // WIDGETS
+    @IBOutlet weak var tableview: UITableView!
     
+    // PROTOCOLS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orders.count
+        return plats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("happen")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mCell", for: indexPath)
-        let contentView = cell.contentView
-        let typeLabel = contentView.viewWithTag(1) as! UILabel
-        let emplacementLabel = contentView.viewWithTag(2) as! UILabel
-        let platLabel = contentView.viewWithTag(3) as! UILabel
         
-        let order = orders[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mCell")
+        let contentView = cell?.contentView
         
-        typeLabel.text = order.type
-        emplacementLabel.text = order.emplacement
-        platLabel.text = String(order.plat!)
+        let platImage = contentView?.viewWithTag(1) as! UIImageView
+        let descPlat = contentView?.viewWithTag(2) as! UILabel
+        let compoPlat = contentView?.viewWithTag(3) as! UILabel
+        let PrixPlat = contentView?.viewWithTag(4) as! UILabel
         
-        return cell
+        let plat = plats[indexPath.row]
+        
+        if (plat.image != nil) {
+            if plat.image != ""{
+                ImageLoader.shared.loadImage(
+                    identifier: plat.image!,
+                    url: "http://localhost:3000/img/" + plat.image!,
+                    completion: { image in
+                        platImage.image = image
+                    })
+            }
+        }
+        
+        descPlat.text = plat.description
+        compoPlat.text = plat.composition
+        PrixPlat.text = String(plat.prix)
+        
+        return cell!
     }
     
-    @IBAction func btnCheckOutClicked(_ sender: Any) {
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "favSegue", sender: indexPath)
     }
     
+    // LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        loadOrders()
-    }
-    
-    // methods
-    func loadOrders() {
-        OrderViewModel().getAllOrders { succes, reponse in
-            self.orders = []
-            if succes {
-                for order in reponse!{
-                    self.orders.append(order)
+        PlatViewModel.sharedInstance.getAll { [self] success, platsFromRep in
+            if success {
+                plats = []
+                for plat in platsFromRep! {
+                    if UserDefaults.standard.array(forKey: "favoriteFood") != nil {
+
+                        let favoritesArray = UserDefaults.standard.array(forKey: "favoriteFood") as! [String]
+                        if favoritesArray.contains(plat._id!){
+                            plats.append(plat)
+                        }
+                    }
+                    print(UserDefaults.standard.array(forKey: "favoriteFood"))
                 }
-                print("-----------------------------------")
-                print(reponse)
-                print("-----------------------------------")
-                self.tableView.reloadData()
-            }
-            else{
-                self.present(Alert.makeAlert(titre: "Error", message: "Could not load plats"), animated: true)
+                
+                self.tableview.reloadData()
+            }else {
+                self.present(Alert.makeAlert(titre: "Error", message: "Could not load formations "),animated: true)
             }
         }
     }
+    
+    // METHODS
 }

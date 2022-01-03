@@ -46,7 +46,7 @@ class ChangerMdpView: UIViewController {
             return
         }
         
-        UserViewModel().changerMotDePasse(email: email!, nouveauMotDePasse: confirmationMotDePasseTextField.text! , completed: { success in
+        UserViewModel.sharedInstance.changerMotDePasse(email: email!, nouveauMotDePasse: confirmationMotDePasseTextField.text! , completed: { success in
             if success {
                 let action = UIAlertAction(title: "Retour", style: .default) { UIAlertAction in
                     self.performSegue(withIdentifier: "signInSegue", sender: nil)

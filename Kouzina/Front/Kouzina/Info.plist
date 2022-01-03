@@ -29,14 +29,14 @@
 			<string>Facebook</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb448917066628661</string>
+				<string>fb464777081699001</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>448917066628661</string>
+	<string>464777081699001</string>
 	<key>FacebookClientToken</key>
-	<string>4a8173a85036c3f6b7601b08b0454d13</string>
+	<string>f90277fda2a0ac270ad6caee0574ca7b</string>
 	<key>FacebookDisplayName</key>
 	<string>Kouzina</string>
 	<key>LSApplicationQueriesSchemes</key>

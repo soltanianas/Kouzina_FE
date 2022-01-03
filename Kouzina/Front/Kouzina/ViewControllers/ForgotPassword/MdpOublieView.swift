@@ -47,7 +47,7 @@ class MdpOublieView: UIViewController {
         
         data = MotDePasseOublieData(email: emailTextField.text, code: String(Int.random(in: 100000..<999999)))
         
-        UserViewModel().motDePasseOublie(email: (data?.email)!, codeDeReinit: (data?.code)! ) { success in
+        UserViewModel.sharedInstance.motDePasseOublie(email: (data?.email)!, codeDeReinit: (data?.code)! ) { success in
             if success {
                 self.performSegue(withIdentifier: "confirmationSegue", sender: self.data)
             } else {
@@ -55,5 +55,7 @@ class MdpOublieView: UIViewController {
             }
         }
     }
+    
+    
     
 }

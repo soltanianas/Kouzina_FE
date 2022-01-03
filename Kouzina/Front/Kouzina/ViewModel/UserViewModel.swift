@@ -11,15 +11,15 @@ import UIKit.UIImage
 
 public class UserViewModel: ObservableObject{
     
-    init(){}
+    static let sharedInstance = UserViewModel()
     
-    func inscription(user: User, completed: @escaping (Bool) -> Void) {
-        AF.request(HOST + "/users/signup",
+    func signup(user: User, completed: @escaping (Bool) -> Void) {
+        AF.request(HOST + "user/signup",
                    method: .post,
                    parameters: [
-                    "nom": user.nom!,
-                    "email": user.email!,
-                    "password": user.password!
+                    "nom": user.nom,
+                    "email": user.email,
+                    "password": user.password
                    ])
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
@@ -35,8 +35,10 @@ public class UserViewModel: ObservableObject{
             }
     }
     
-    func connexion(email: String, mdp: String, completed: @escaping (Bool, Any?) -> Void) {
-        AF.request(HOST + "/users/login",
+    func login(email: String, mdp: String, completed: @escaping (Bool, Any?) -> Void) {
+        print("sup")
+        print(HOST + "user/login")
+        AF.request(HOST + "user/login",
                    method: .post,
                    parameters: ["email": email, "password": mdp])
             .validate(statusCode: 200..<300)
@@ -62,8 +64,8 @@ public class UserViewModel: ObservableObject{
             }
     }
     
-    func loginWithSocialApp(email: String, nom: String, completed: @escaping (Bool, User?) -> Void ) {
-        AF.request(HOST + "/users/loginWithSocial",
+    func loginWithSocial(email: String, nom: String, completed: @escaping (Bool, User?) -> Void ) {
+        AF.request(HOST + "user/loginWithSocial",
                    method: .post,
                    parameters: ["email": email, "nom": nom],
                    encoding: JSONEncoding.default)
@@ -91,7 +93,7 @@ public class UserViewModel: ObservableObject{
     }
     
     func motDePasseOublie(email: String, codeDeReinit: String, completed: @escaping (Bool) -> Void) {
-        AF.request(HOST + "/users/motDePasseOublie",
+        AF.request(HOST + "user/motDePasseOublie",
                    method: .post,
                    parameters: ["email": email, "codeDeReinit": codeDeReinit])
             .validate(statusCode: 200..<300)
@@ -109,7 +111,7 @@ public class UserViewModel: ObservableObject{
     }
     
     func changerMotDePasse(email: String, nouveauMotDePasse: String, completed: @escaping (Bool) -> Void) {
-        AF.request(HOST + "/users/changerMotDePasse",
+        AF.request(HOST + "user/changerMotDePasse",
                    method: .put,
                    parameters: ["email": email,"nouveauMotDePasse": nouveauMotDePasse])
             .validate(statusCode: 200..<300)
@@ -126,35 +128,6 @@ public class UserViewModel: ObservableObject{
             }
     }
     
-    func recupererUserParID(_id: Int?) -> User {
-        var data: User?
-        
-        AF.request(HOST + "/users",
-                   method: .get,
-                   parameters: ["_id": String(_id!)])
-            .responseJSON(completionHandler: { jsonResponse in
-                let jsonResponse = JSON(jsonResponse)[0]
-                
-                data = self.makeItem(jsonItem: jsonResponse)
-            })
-        
-        return data!
-    }
-    
-    func recupererToutUser() -> [User] {
-        var data: [User]?
-        
-        AF.request(HOST + "/users").responseJSON(completionHandler: { jsonResponse in
-            let jsonResponse = JSON(jsonResponse)
-            
-            for (_,subJson):(String, JSON) in jsonResponse {
-                data!.append(self.makeItem(jsonItem: subJson))
-            }
-        })
-        
-        return data!
-    }
-    
     func makeItem(jsonItem: JSON) -> User {
         return User(
             _id: jsonItem["_id"].stringValue,
@@ -165,5 +138,4 @@ public class UserViewModel: ObservableObject{
             role: jsonItem["role"].stringValue
         )
     }
-    
 }
