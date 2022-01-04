@@ -11,6 +11,9 @@ import GoogleMaps
 import CoreLocation
 import GoogleSignIn
 import FBSDKCoreKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -23,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+        
+        AppCenter.start(withAppSecret: "335f271d-7266-48fb-9221-b18e484c6457", services:[
+          Analytics.self,
+          Crashes.self
+        ])
         
         // Facebook
         let facebook = ApplicationDelegate.shared.application(

@@ -5,6 +5,14 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - AppCenter (4.4.1):
+    - AppCenter/Analytics (= 4.4.1)
+    - AppCenter/Crashes (= 4.4.1)
+  - AppCenter/Analytics (4.4.1):
+    - AppCenter/Core
+  - AppCenter/Core (4.4.1)
+  - AppCenter/Crashes (4.4.1):
+    - AppCenter/Core
   - FBAEMKit (12.1.0):
     - FBSDKCoreKit_Basics (= 12.1.0)
   - FBSDKCoreKit (12.1.0):
@@ -40,6 +48,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AppCenter
   - FBSDKLoginKit
   - FittedSheets
   - GoogleMaps
@@ -55,6 +64,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AppAuth
+    - AppCenter
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -74,6 +84,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   FBAEMKit: 56c0bb9b42e3747cd82b67934f0c2b19325382ea
   FBSDKCoreKit: 75368765d9c2303073145a7925dfaa9d60bcd77b
   FBSDKCoreKit_Basics: 39865aff97e5f6951a78fb3e89dc4460e35e1895
@@ -90,6 +101,6 @@ SPEC CHECKSUMS:
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 7108d6793ab9b79823c7e6b225b163f4d62590d9
+PODFILE CHECKSUM: f00cd0a8225a58e7166fe9a4dcf5235d5f4bdd58
 
 COCOAPODS: 1.11.2
