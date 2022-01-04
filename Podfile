@@ -24,6 +24,7 @@ target 'Kouzina' do
   pod 'FittedSheets'
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
+  pod 'AppCenter'
 
   target 'KouzinaTests' do
     inherit! :search_paths

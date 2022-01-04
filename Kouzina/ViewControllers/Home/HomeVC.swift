@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AppCenter
+import AppCenterCrashes
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -97,6 +99,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppCenter.start(withAppSecret: "335f271d-7266-48fb-9221-b18e484c6457", services:[
+          Crashes.self
+        ])
     }
     
     var newBool = true
